@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Management;
 using System.Collections.Generic;
 using System.Text;
 
@@ -40,10 +39,5 @@ namespace WindowsAudit
         string SystemName;
         Int32 TimeOnBattery;
         Int32 TimeToFullCharge;
-
-        public void Get()
-        {
-
-        }
     }
 }

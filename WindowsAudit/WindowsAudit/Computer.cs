@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using WindowsAudit.Software;
 using System.Text;
 
 namespace WindowsAudit
 {
     class Computer
     {
-        MotherBoard motherboard;
-        BIOS bios;
+        List<MotherBoard> motherboards;
+        List<BIOS> bios;
         List<CPU> cpus;
         List<CacheMemory> cache;
         List<GPU> gpus;
@@ -25,5 +26,10 @@ namespace WindowsAudit
         List<SoundDevice> soundDevices;
         List<SystemSlot> systemSlots;
         List<USBController> usbControllers;
+
+        public void GetAllHardware()
+        {
+            batteries = Software.GetBatteries();
+        }
     }
 }

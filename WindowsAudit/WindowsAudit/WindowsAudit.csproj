@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Computer.cs" />
+    <Compile Include="Hardware.cs" />
     <Compile Include="Software\Account.cs" />
     <Compile Include="Software\Desktop.cs" />
     <Compile Include="Hardware\Battery.cs" />
@@ -68,7 +69,8 @@
     <Compile Include="Hardware\SystemSlot.cs" />
     <Compile Include="Hardware\USBController.cs" />
     <Compile Include="Software\Service.cs" />
-    <Compile Include="Software\Software.cs" />
+    <Compile Include="Software\Program.cs" />
+    <Compile Include="Software.cs" />
     <Compile Include="Software\TimeZone.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

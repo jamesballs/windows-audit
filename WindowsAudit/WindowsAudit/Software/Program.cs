@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WindowsAudit
 {
-    class Software
+    class Program
     {
         string Contact;
         string DisplayName;
