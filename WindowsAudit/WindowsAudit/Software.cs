@@ -71,19 +71,19 @@ namespace WindowsAudit
 
         public static List<CDROMDrive> GetCDDrives()
         {
-            ManagementObjectCollection cdDriveCol = new ManagementObjectSearcher("SELECT * FROM Win32_").Get();
+            ManagementObjectCollection cdDriveCol = new ManagementObjectSearcher("SELECT * FROM Win32_CDROMDrive").Get();
             List<CDROMDrive> cdDrives = new List<CDROMDrive>();
 
             foreach (ManagementObject obj in cdDriveCol)
             {
-                CDROMDrive currentCache = new CDROMDrive();
+                CDROMDrive currentCDDrive = new CDROMDrive();
 
-                foreach (var prop in currentCache.GetType().GetProperties())
+                foreach (var prop in currentCDDrive.GetType().GetProperties())
                 {
-                    prop.SetValue(currentCache, Convert.ChangeType(obj[prop.Name], prop.PropertyType));
+                    prop.SetValue(currentCDDrive, Convert.ChangeType(obj[prop.Name], prop.PropertyType));
                 }
 
-                cdDrives.Add(currentCache);
+                cdDrives.Add(currentCDDrive);
             }
 
             return cdDrives;

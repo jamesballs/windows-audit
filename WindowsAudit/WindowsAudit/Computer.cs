@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using WindowsAudit.Software;
 using System.Text;
 
 namespace WindowsAudit
@@ -31,5 +30,7 @@ namespace WindowsAudit
         {
             batteries = Software.GetBatteries();
         }
+
+
     }
 }
